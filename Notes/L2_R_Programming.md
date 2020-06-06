@@ -1,0 +1,97 @@
+## 2. R Programming
+
+
+http://simplystatistics.org/ 
+
+ [Not So Standard Deviations](https://soundcloud.com/nssd-podcast)
+
+```r
+#Set the working directory
+setwd("C://Users//DTriana//Google Drive//E-Learning//Coursera")
+```
+List files on directory >> `dir()` 
+Call file with function >> `source("mycode.R")`
+
+S -> R Jhon Chambers and Others at Bell Labs
+
+Drawbacks:
+ - 40 year old technically
+ - Little bulit in support for 3D graphics
+ - Functionalaty based on consumer demand
+ - Objects stored in physical memory
+
+Some references:
+
+Chambers >> data analysis and programming the data are both published by Springer
+Bill Venables and Brian Ripley >> One is called Modern Applied Statistics with S, and another one's called S Programing.
+
+Paul Murrell >> who designed the R graphic system has written a book called R Graphics and actually it's currently in its second edition right now. 
+
+Springer, the publisher Springer has a series of books called Use R, which is, which is a, a lot of very, kind of relatively short books
+
+Nice Post: 
+Describe the Goal
+Explicit question 
+Minimum amount of information
+Be Courteous
+Follow up with solution
+
+### Data Types 
+Everything in R is an object.
+
+Atomic classses of object: Character, numeric, integer, complex, logical.
+
+Vector > Only of the same class.
+List > Vector > Each element can be of different class. ( vector() function can create empty vectors. Also `c()` function ).
+
+Inf > infinity can be used for calculations.
+`attributes()` >set or modify attributes from an object.
+
+Mixed Objects (``` y <- c(1.7,"a") ```)? > least type is used for all vector.
+
+Forcing objects into particular class >
+
+```r
+as.numeric(x)
+as.logical(x)
+as.complex(x)
+```
+
+Nonsensical coercion results in NAs.
+Lists contain elements of different class. 
+
+Matrix
+```r
+ m<-1:10
+ m <- matrix(1:6, nrow=2, ncol=3)
+ dim(m) <- c(2,5)
+```
+Another way, colomn binding or row binding with `cbind()` and `rbind()`.
+
+### Factors
+Ordered | unordered
+
+Factor level are ordered alphabetically. It can be explicitly set.
+
+```r
+> x <- factor(c("yes","yes","no","yes","no"))
+> x
+[1] yes yes no  yes no 
+Levels: no yes
+> table(x)
+x
+ no yes 
+  2   3 
+```
+
+### Missing values
+
+*NA* can be int NA, character NA, etc.
+
+```r
+#Used to test objects if they are NA
+is.na() 
+
+#Used to test objects if they are NaN
+is.nan()
+```
