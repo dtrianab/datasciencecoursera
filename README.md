@@ -5,7 +5,7 @@ This repositorio contains notes and code related to Coursera Training Course [Da
 This list below contains notes documented from the set of 9 sections included in this course. 
 
 Links for the notes:
- - [1. The Data Scientist’s Toolbox](https://github.com/dtrianab/datasciencecoursera/blob/master/Notes/L1_DataScientists_Toolbox.mdd)
+ - [1. The Data Scientist’s Toolbox](https://github.com/dtrianab/datasciencecoursera/blob/master/Notes/L1_DataScientists_Toolbox.md)
  - [2. R Programming](https://github.com/dtrianab/datasciencecoursera/blob/master/Notes/L2_R_Programming.md)
 
 
