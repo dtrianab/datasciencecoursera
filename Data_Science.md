@@ -21,15 +21,18 @@ Define the question(s) to be answered.
 Example of a post: https://hilaryparker.com/
 https://github.com/hilaryparker/names
 
-Interesting project for taking out information from video and making PDFs:
-http://syntaxi.net/2013/01/20/storyboard/
-https://github.com/markolson/storyboard
+Interesting project for taking out information from video and [making PDFs](http://syntaxi.net/2013/01/20/storyboard/).
+
+[storyboard](https://github.com/markolson/storyboard)
 
 ###  R
-(the Comprehensive R Archive Network, or CRAN)[https://cran.r-project.org/]
-Insert Chunk >> Ctrl + Alt + I
-**bolt** 
-*italics*
+[The Comprehensive R Archive Network, or CRAN](https://cran.r-project.org/)
+
+Insert Chunk in R Studio >> Ctrl + Alt + I
+
+`**bolt** `
+
+`*italics*`
 
 ### Types of analysis
 
@@ -45,18 +48,15 @@ Insert Chunk >> Ctrl + Alt + I
 ### Experimental Design 
 
 Formulate your question > Design your experiment
-Identify problems and source of error
-Collect the data
-Ellaborate the hypothesis 
-Sample size?
+Identify problems and source of error, Collect the data, Ellaborate the hypothesis. Sample size?.
 
-Confounder Variables: Extraneous variable that may effect the relationship between the dependent and independent variables.
+*Confounder Variables*: Extraneous variable that may effect the relationship between the dependent and independent variables.
 
 When the stakes are this high, experimental design is paramount.
 
 ### Replication
 
-p-value >> This is a value that tells you the probability that the results of your experiment were observed by chance.
+**p-value** >> This is a value that tells you the probability that the results of your experiment were observed by chance.
 
 https://www.youtube.com/watch?v=UsU-O2Z1rAs
 
@@ -76,10 +76,15 @@ https://projects.fivethirtyeight.com/p-hacking/
 
 http://simplystatistics.org/ 
 
-Not So Standard Deviations >> https://soundcloud.com/nssd-podcast
-Set the working directory >> setwd("C://Users//DTriana//Google Drive//E-Learning//Coursera")
-List files on directory >> dir() 
-Call file with function >> source("mycode.R")
+ [Not So Standard Deviations](https://soundcloud.com/nssd-podcast)
+
+```r
+#Set the working directory
+setwd("C://Users//DTriana//Google Drive//E-Learning//Coursera")
+```
+List files on directory >> `dir()` 
+Call file with function >> `source("mycode.R")`
+
 S -> R Jhon Chambers and Others at Bell Labs
 
 Drawbacks:
@@ -135,6 +140,35 @@ Matrix
  dim(m) <- c(2,5)
 ```
 Another way, colomn binding or row binding with `cbind()` and `rbind()`.
+
+### Factors
+Ordered | unordered
+
+Factor level are ordered alphabetically. It can be explicitly set.
+
+```r
+> x <- factor(c("yes","yes","no","yes","no"))
+> x
+[1] yes yes no  yes no 
+Levels: no yes
+> table(x)
+x
+ no yes 
+  2   3 
+```
+
+### Missing values
+
+*NA* can be int NA, character NA, etc.
+
+```r
+#Used to test objects if they are NA
+is.na() 
+
+#Used to test objects if they are NaN
+is.nan()
+```
+
 
 ## 3. Getting and Cleaning Data
 
