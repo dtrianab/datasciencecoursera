@@ -1,6 +1,6 @@
 #Quiz #1 --R Programming 
 
-setwd("C://Users//DTriana//Google Drive//E-Learning//Coursera")
+setwd("C://Users//DTriana//Google Drive//E-Learning//Coursera//code")
 file="hw1_data.csv"
 dat <-read.csv(file, header = TRUE)
 str(dat)
