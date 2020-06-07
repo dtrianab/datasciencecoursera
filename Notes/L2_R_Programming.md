@@ -95,3 +95,48 @@ is.na()
 #Used to test objects if they are NaN
 is.nan()
 ```
+### Data Frames
+
+Tabular data > Different classes of objects. All objects can have names. matrix > dimnames()
+
+`colClasess` argument may increase the time for reading large files. if specified, it could speed up the reading process.
+
+```r
+#Reading Tabular data
+row.names
+read.table() #def separator  --space
+read.csv()   #def separator  --comma
+
+#Can be converted to a Matrix
+data.matrix()
+
+#Read lines of a text file
+readLines
+
+#Reading in R code files (Inverse of dump)
+source
+
+#Readin in R code files (Inverse of dput)
+dget
+
+#Reading in saved workspaces
+load
+
+#Reading objects in binary form
+unserialize 
+
+```
+
+In dumping and dputingm, resulting textual format is edit-table. `dget` usedonly on a single R object. `dump` can be used on multiple objects.
+
+Coonection interfaces: `file`, `gzfile` (zip), `bzfile`(bzip2), `url` webpage.
+
+Subsets:
+ - **[** > Returns an object of the same class as the original. It can be used to select more than one.
+
+ - **[[** > Extracts elements of a list or a dtaframe (Single element).
+
+ - **&** Extracts element by name, Only literal names, no variables can pass over the name.
+
+
+

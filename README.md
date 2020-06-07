@@ -1,6 +1,6 @@
 # Data Science Coursera
 
-This repositorio contains notes and code related to Coursera Training Course [Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science) by Johns Hopkins University and publish on Coursera.
+This repository contains notes and code related to Coursera Training Course [Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science) by Johns Hopkins University and publish on Coursera.
 
 This list below contains notes documented from the set of 9 sections included in this course. 
 
