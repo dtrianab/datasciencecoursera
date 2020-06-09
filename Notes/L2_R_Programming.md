@@ -1,4 +1,6 @@
-## 2. R Programming
+# 2. R Programming
+
+## Week 1
 
 
 http://simplystatistics.org/ 
@@ -94,6 +96,10 @@ is.na()
 
 #Used to test objects if they are NaN
 is.nan()
+
+#Missing values
+complete.cases(Var)
+
 ```
 ### Data Frames
 
@@ -138,5 +144,22 @@ Subsets:
 
  - **&** Extracts element by name, Only literal names, no variables can pass over the name.
 
+`%*%` > True matrix multiplication
 
+
+## Week 2
+
+Tutorial:
+https://github.com/rdpeng/practice_assignment/blob/master/practice_assignment.rmd
+
+### Control structures
+
+`repeat` execute infinite loop, `break` stops it
+`next` skip an iteration of a loop
+
+Sequence Generation > `seq_along(x)`
+
+## Functions
+
+na.rm =TRUE/FALSE 
 
