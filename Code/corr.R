@@ -20,7 +20,7 @@ corr <- function(directory, threshold=0){
       com[i]<-sum(var3)
       
       if(com[i]>threshold){
-        print("eee")
+        print("eee")7
 
       }
     }
