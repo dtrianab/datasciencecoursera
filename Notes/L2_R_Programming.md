@@ -161,5 +161,30 @@ Sequence Generation > `seq_along(x)`
 
 ## Functions
 
-na.rm =TRUE/FALSE 
+* na.rm =TRUE/FALSE > Skip NA in calculations
+* `...` Argument for *Variable number of arguments*. Often used when extending another function. Arguments can then be passed to methods.
+* `Lexical Scoping` or `static scoping` How to use the search list to bind a value to a symbol
+* Typically a function is defined in the global environment.
+* `ls(environment(funct))` -> Whats in a function environment. `get()`
 
+`optim`
+`nlm`
+
+ - Text editor
+ - Indenting (Space over to the right blocks). Indents of 4 Spaces; 8 Spaces ideal.
+ - Limit the length of individual functions
+ 
+ ## Dates and clasess
+
+ `Datas` class represents dates.
+ Time represented by `POSIXct` `POSIXlt` 
+
+`as.Date("1970-01-01")`
+
+`POSIXct` - Very large integer
+`POSIXlt` - List, stores richer information
+
+`weekdays`, `months`, `quarters` (Q1,Q2,Q3,Q4)
+
+`Sys.time()` > Actual time in the system
+`strptime` Formating dates <-> strings 

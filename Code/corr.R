@@ -1,6 +1,11 @@
 corr <- function(directory, threshold=0){
+  
   id=1:332
   com<-rep(0, length(id))
+  
+  cr<-0
+  cr_id<-0
+  
   for(i in 1:length(id)){
     #File names with 0/00 at the begining
     a <- ""
@@ -20,12 +25,16 @@ corr <- function(directory, threshold=0){
       com[i]<-sum(var3)
       
       if(com[i]>threshold){
-        print("eee")7
-
+        if(cr_id[1]==0){
+          cr_id<-i
+          cr<-cor(dat$sulfate[var3],dat$nitrate[var3])
+        } else {
+          cr_id<-c(cr_id,i)
+          cr<-c(cr, cor(dat$sulfate[var3],dat$nitrate[var3]))
+        }
+        
       }
     }
   }
-  out<-data.frame("id"=id, "nobs"=com)
-  out
-  
+  cr
 }

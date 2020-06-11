@@ -27,4 +27,14 @@ complete("specdata", 3)
 
 source("corr.R")
 source("complete.R")
-corr("specdata", 150)
+cr<-corr("specdata", 5000)
+head(cr)
+summary(cr)
+
+
+cr<-corr("specdata")
+head(cr)
+summary(cr)
+length(cr)
+
+
