@@ -159,7 +159,7 @@ https://github.com/rdpeng/practice_assignment/blob/master/practice_assignment.rm
 
 Sequence Generation > `seq_along(x)`
 
-## Functions
+### Functions
 
 * na.rm =TRUE/FALSE > Skip NA in calculations
 * `...` Argument for *Variable number of arguments*. Often used when extending another function. Arguments can then be passed to methods.
@@ -167,8 +167,7 @@ Sequence Generation > `seq_along(x)`
 * Typically a function is defined in the global environment.
 * `ls(environment(funct))` -> Whats in a function environment. `get()`
 
-`optim`
-`nlm`
+Optimization functions `optim` and `nlm`.
 
  - Text editor
  - Indenting (Space over to the right blocks). Indents of 4 Spaces; 8 Spaces ideal.
@@ -188,3 +187,48 @@ Sequence Generation > `seq_along(x)`
 
 `Sys.time()` > Actual time in the system
 `strptime` Formating dates <-> strings 
+
+
+## Week 3
+
+### Loop Functions and Debugging
+
+* Loop functions: lapply, apply, tapply, split, mapply
+* Debugger, Parts 1-3
+
+Define an anonymous function and describe its use in loop functions [see lapply]
+Describe how to start the R debugger for an arbitrary R function
+Describe what the traceback() function does and what is the function call stack
+
+`lapply` : Loop over a list and evaluate a function on each element
+`sapply`: Simplified lapply
+`apply`: Apply function over the margins
+`tpply`: Apply function over subsets of a vector
+`mapply`: Multivariete version of lapply
+`split`: Aux function, in conjunction with lapply
+
+col/row sums and means: `rowSums()`, `rowMeans()`, `colSums`,`colMeans()`.
+
+`mapply` is usefule for functions that accepts single inputs and vectorize it.
+`tpply` Over a Ragged Array (Simplfy = FALSE) -> list 
+`split` Divide into Groups and Reassemble, `drop=TRUE` ->Empty levels can be dropped
+`interaction()` Compute Factor Interactions
+
+### Debugging Tools - Diagnosing the Problem
+
+Indications something is not right > *message* | *warining* | *error* | *condition*
+`invisible(x)` Change the Print Mode to Invisible
+
+`traceback()` prints out the function call stack after an error occurs; does nothing if no error.
+
+`debug()` flags a function for debug mode, allows to step through execution.
+
+`browser()` suspends the execution of a function whenever it is called and puts the function in debug mode
+
+`trace()` allows you to insert  debugging code into a function
+
+`recover()` modify the error behavior so you can browser the function call stack
+ 
+#### Further Reading
+
+*The Split-Apply-Combine Strategy for Data Analysis* Hadley Wickham's Journal of Statistical Software
