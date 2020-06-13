@@ -1,0 +1,145 @@
+# L2_Getting and Cleaning Data
+
+## Week 1
+
+### Raw and Processed Data
+
+* Values quantitative or qualitative.
+* Processed data
+  - Ready for analysis
+  - All steps should be recorded
+* Tidy data
+  - A code book describing each variable
+  - An explicit and exact recipe you used to go from valueA > valueB
+  - Each variable by Colomn
+  - Observation by Row
+  - Row at the top with variable names
+  - Make variable names human readable
+  - Save One file per table 
+  - Info about variable (Units!)
+  - The instruction list script(raw data > processed tidy data)
+
+* Downloading files 
+  - `setwd("./data")` Relative
+  - `setwd("/users/userdir")` Absolute
+
+```r
+if(!file.exists("data")){
+    dir.create("data")
+}
+```
+
+`download.file()`
+
+Pen baltimore > https://data.baltimorecity.gov/
+
+`https` links may require `method = "curl"` in `download.file()` method.
+Important to keep track of the day the data was download `dateDownLoaded <- date()`
+
+`read.csv()`
+`quote=""`You can tell R whether there are any quoted values.
+`na.strings` set the character that represents a missing value.
+`nrows` how many rows to read.
+`skip` number of lines to skip before starting to read.
+
+
+### Reading Excel
+
+xlsx package: `read.xlsx()` `read.xlsx2()` `write.xlsx`
+XLConnect: Package has more options for writing and manipulating
+
+### XML
+Extensible markup language
+```xml
+<section> </section>
+<line-break />
+<greeting> Heloo </greeting>
+```
+
+
+```r
+library(XML)
+fileUrl<-"http://example.com/xml/simple.xml"
+doc<-xmlTreeParse(fileUrl, useInternal= TRUE)
+rootNode<-xmlRoot(doc)
+xlmName(rootNode)
+
+#Access part of the XML
+rootNode[[1]]
+
+#First subcomponent 
+rootNode[[1]][[1]]
+
+#Programatically extract parts of the file 
+xmlSapply(rootNode,xmlValue)
+```
+**Xpath Language**
+`/node` Top level
+`//node` Node at any level
+`node[@attr-name]` Node with an attribute name
+`node[@attr-name='bob']` Node with att-name='bob'
+
+```r
+# Get the items on the menu 
+xpathApply(rootNode, "//name", xmlValue)
+
+# Get price of items  
+xpathSapply(rootNode, "//price", xmlValue)
+
+# Extract content by attribute
+xpathSapply(doc, "//lic@class='score'", xmlValue)
+xpathSapply(doc, "//lic@class='team-name'", xmlValue)
+```
+
+### JSON - JavaScript Object Notation
+
+Common for APIs
+
+```r
+#Reading data from JSON
+library(jsonlite)
+jsonData <- fromJSON("https://api.github.com/...")
+names(jsonData)
+
+#Export Json 
+myjson <- toJSON(iris, pretty=TRUE)
+```
+
+### data.table
+* Inherets from data.fram
+* Faster than data frame at subsetting and updating
+* Written in C
+* Can be created jusk like data frame
+* Subsetting as with data frame
+* Subsetting columns is different
+* Keys can be used to facilitate joins of tables
+
+```r
+#See all the data table
+tables()
+
+#Calculating values for variables with expressions
+DT[, list(mean(x),sum(z))]
+
+#Add new columns := 
+DT[,w:=z^2] 
+
+#multiple step function
+DT[,m:={tmp <- (x+z); log2(tmp+)}]
+DT[, a:= x>0] 
+
+# .N 
+set.seed(123)
+x=c("a","b","c")
+DT[, .N, by=x] #Count the number of times each letter appear
+
+setkey(DT,x)
+DT['a']
+
+```
+It can be set same keys in two datasets and `merge()` them
+
+Fast Reading from disk `fread()` 
+
+`melt()` `dcast()`
+What can you do with data frame  
