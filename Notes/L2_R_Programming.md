@@ -232,3 +232,58 @@ Indications something is not right > *message* | *warining* | *error* | *conditi
 #### Further Reading
 
 *The Split-Apply-Combine Strategy for Data Analysis* Hadley Wickham's Journal of Statistical Software
+
+
+## Week 4
+
+`str()` display internal structure.
+
+### Simulation
+
+`rnorm()` Random normal variates with a given mean and standard deviation.
+`dnorm()` Evaluate the normal probability density (with a given mean/SD).
+`pnorm()` Cumulative distribution function for normal distribution
+`rpois()` random Poison variates
+
+**d** for density 
+**r** for random
+**p** for cumulative distribution
+**q** for quantile function
+
+`lower.tail=TRUE`if false it evaluates the upper tail.
+
+`set.seed()`
+`rbinom()` Random Binary normal distribution
+
+### Random Sampling
+`sample()` Random samples from vector
+* `replace=TRUE` Sample with replacement
+
+## Tools for optimizing
+Sytematic way of examinate how much time is spend in different part od a program.
+
+* Design first
+* Premature optimization is the root of all evil
+* Measure (Collect data), dont guess
+
+system.time() > Give the amount of time needed to execute an expression
+
+Returns object `proc_time`
+ - **user time**: time charged to the CPU for this expression
+ - **elapsed time** "wall clock" time
+
+
+### R Profiler
+
+`Rprof()` keeps track of the funtion call stack at regularly sampled invervals and tabulates how much time is spend in each function
+`summaryRprof()` 
+
+* Default sampling interval is 0.02 Seconds
+* If the code runs very qickly, the profiler is not useful.
+
+**by.total**  Time spent in function and callees.
+**by.self** How much time is spend in a function alone with all its sublevels
+
+* sample.interval
+* sampling.time
+
