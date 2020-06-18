@@ -138,8 +138,54 @@ DT['a']
 
 ```
 It can be set same keys in two datasets and `merge()` them
-
 Fast Reading from disk `fread()` 
+`melt()` `dcast()` What can you do with data frame  
 
-`melt()` `dcast()`
-What can you do with data frame  
+
+### Reading from MySQL
+
+Each table > dataframe
+install MySQL
+
+http://biostat.mc.vanderbilt.edu/wiki/Main/RMySQL
+http://www.ahschulz.de/2013/07/23/installing-rmysql-under-windows/
+
+```r
+ucscDb <-dbConnect(MySQL, user="genome", host=)
+result <-dbGetQuery...
+dbDisconnect(ucscDb) # Should return TRUE
+
+dbListFields(connection, "tabletoPoint") #Should return all names field
+dbGetQuery(connection, "select count(*) from tabletoPoint") # Count the number of elements in the table
+
+query<-dbSendQuery(connection, "select * from tabletoPoint where misMatches between 1 and 3")
+
+affyMis <- fetch(query)
+
+quantile(affyMis$missMatches)
+
+```
+* Dont forget to close the connection: `dbDisconnect(connection)`
+* Use only select
+* r-bloggers/mysql-and-r
+
+### Reading from HDF5
+* Used for storing large datasets
+* Supports storing a range of data types
+* Hierarchical data format
+
+http://www.hdfgroup.com
+
+```R
+library(rhdf5)
+created <- h5createFile("myhdf5file.h5")
+h5createGroup("example.h5","foo")
+h5createGroup("example.h5","baa")
+
+h5write(A,"file.h5", "foo/A")
+
+h5write(c(12,13,14), "example.h5","foo/A", index = list(1:3,1)) # Writing and reading chunks 
+
+```
+
+### Reading from The Web
