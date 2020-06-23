@@ -181,11 +181,65 @@ library(rhdf5)
 created <- h5createFile("myhdf5file.h5")
 h5createGroup("example.h5","foo")
 h5createGroup("example.h5","baa")
-
 h5write(A,"file.h5", "foo/A")
-
 h5write(c(12,13,14), "example.h5","foo/A", index = list(1:3,1)) # Writing and reading chunks 
-
 ```
 
 ### Reading from The Web
+
+* Getting data off webpages - `readLines()`
+* Parsing with XML unsing internal nodes 
+* GET from httr package `html2<-GET(url)` 
+
+`content(html2,as="text")`
+
+* Accessing websites with passwords
+  `GET( url,authenticate("user","passswd"))` 
+
+  using handles google<-handle("http://google.com")
+
+
+  ### Reading from API - Application Programming interfaces
+
+```r
+  myapp= oauth_app("twitter", keys="yourConsumerKeyhere", secret="")
+  sign = sign_oauth1.0(myapp, token="mytoken", token_secret="my tokenSecret")
+  homeTL=GET("https://api.twitter.com/1.1/statuses/hometimeline.json", sig)
+  json1=content(homeTL)
+  json2=jsonlite::fromJSON(toJSON(json1))
+´´´ 
+
+httr allows GET, POST, PUT, DELETE
+Examples at > httr demos
+
+### Reading from another sources
+
+jpeg, readbitmap, png
+GIS data
+mp3
+
+## Week 3
+
+### Subsetting, Ordering 
+`plyr > arrange(X, desc(var1))`
+
+make table > `table(dt$var, useNA="ifany")`
+Cros tabs > `xtabs(Freq ~ Gender + Admit, data=DF)`
+`xtabs(breaks ~ ., data=warpbreaks)`
+flatetable > ftable(xt)
+`ifelse()` > Conditional Element Selection
+`cut(var, breaks=quantile(var2))` Convert Numeric to Factor
+
+> dacast() > wide reshaping tool
+
+## dplyr package
+* select
+* filter
+* arrange
+* rename
+* mutate
+* summarise/summarize
+
+Fixing character vectors > tolower(), toupper()
+
+
