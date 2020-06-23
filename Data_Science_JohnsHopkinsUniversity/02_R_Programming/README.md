@@ -2,15 +2,16 @@
 
 ## Week 1
 
-
+### Readings:
 http://simplystatistics.org/ 
+[Not So Standard Deviations](https://soundcloud.com/nssd-podcast)
 
- [Not So Standard Deviations](https://soundcloud.com/nssd-podcast)
 
 ```r
 #Set the working directory
 setwd("C://Users//DTriana//Google Drive//E-Learning//Coursera")
 ```
+
 List files on directory >> `dir()` 
 Call file with function >> `source("mycode.R")`
 

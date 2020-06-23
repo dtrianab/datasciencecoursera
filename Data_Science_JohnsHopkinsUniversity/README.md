@@ -1,17 +1,17 @@
 # Data Science Coursera
 
-This repository contains notes and code related to Coursera Training Course [Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science) by Johns Hopkins University and published by Coursera.
+This repository contains notes and code related to Coursera Training Courses [Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science) by Johns Hopkins University and published by Coursera.
 
 This list below contains notes documented from the set of 9 sections included in this course. 
 
-Links for the notes:
- - [1. The Data Scientist’s Toolbox](https://github.com/dtrianab/datasciencecoursera/blob/master/Notes/L1_DataScientists_Toolbox.md)
- - [2. R Programming](https://github.com/dtrianab/datasciencecoursera/blob/master/Notes/L2_R_Programming.md)
-
+Links for notes:
+ - [1. The Data Scientist’s Toolbox](https://github.com/dtrianab/datasciencecoursera/blob/master/Data_Science_JohnsHopkinsUniversity/01_The_Data_Scientists_Toolbox/README.md)
+ - [2. R Programming](https://github.com/dtrianab/datasciencecoursera/blob/master/Data_Science_JohnsHopkinsUniversity/02_R_Programming/README.md)
+ - [3. Getting and Cleaning Data](https://github.com/dtrianab/datasciencecoursera/blob/master/Data_Science_JohnsHopkinsUniversity/03_Getting_and_Cleaning_Data/README.md)
 
 Pending >
 ````
-## 3. Getting and Cleaning Data
+
 
 ## 4. Exploratory Data Analysis
 
