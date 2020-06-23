@@ -241,5 +241,7 @@ flatetable > ftable(xt)
 * summarise/summarize
 
 Fixing character vectors > tolower(), toupper()
+Separate out > strsplit()
+
 
 
