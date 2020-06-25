@@ -2,7 +2,7 @@
 
 The Github repo contains the required script and data for Getting and Cleaning Data Course Project.
 
-The R script called run_analysis.R does the following:
+The R script called [run_analysis.R](https://github.com/dtrianab/datasciencecoursera/blob/master/Data_Science_JohnsHopkinsUniversity/03_Getting_and_Cleaning_Data/Getting_and_Cleaning_Data_Course_Project/run_analysis.R) does the following:
 
 ## 0. Read Files
 Read all necessary files from the current directory by using `fread()`function.
@@ -31,4 +31,4 @@ Data frame X_tidy is stored as table.
 
 X_tidy table is passed onte lapply with mean funtion grouping by activity and subject.
 
-Table is written out as "data_clean_DT.txt" and row.names = FALSE using `write.table()`. 
+Table is written out as ["data_clean_DT.txt"](https://github.com/dtrianab/datasciencecoursera/blob/master/Data_Science_JohnsHopkinsUniversity/03_Getting_and_Cleaning_Data/Getting_and_Cleaning_Data_Course_Project/data_clean_DT.txt) and row.names = FALSE using `write.table()`. 
