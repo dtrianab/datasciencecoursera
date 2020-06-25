@@ -240,9 +240,75 @@ flatetable > ftable(xt)
 * mutate
 * summarise/summarize
 
+# Week 4
+
+## Editing Text Variables
+
 Fixing character vectors > tolower(), toupper()
 Separate out > strsplit()
 
+Regular Expressions > metacharacters to indetify patern
+[aA]
+[Ii] am
+[0-9][a-zA-Z]
+
+"." refer to any character
+9.11
+
+flood|fire > lines matching with either flood or fire
+
+The begining of the line with good or anywhere with Bad
+^[Gg]ood|[Bb]ad
+
+?: indicates that the expression is optional
+\.:escape metacharacter 
+*:any number, including none, of the items 
++:at least one of the item 
+
+
+[Bb]ush( +[^ ]+ +){1,5} debate
+
+( +[^ ]+ +){1,5} 
+
+m,n at least m but not more than n matches
+m exactly m
+m, at least m matches
+
+\1
+\2
+refer to matched text
+
++([a-zA-Z]+) +\1+
+
+* is greedy, matches the longest possible string that satisfies the expression.
+^s(.*)s
+^s(.*?)s
+
+### Working with dates
+
+date()
+library(lubridate)
+
+### Data Resources
+UN data.un.org
+data.gov
+data.gov.uk
+
+gapminder.org
+asdfree.com
+kaggle
+
+Hilary Mason
+Peter Skormoroch
+
+blog.mortartdata
+stanford large net data science
+UCI
+KDD
+CMU Statlib
+Gene expression mnibus
+ArXiv Data
+Public Data Sets on AWS
 
 
 

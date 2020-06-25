@@ -53,3 +53,5 @@ head(x_tidy)
 x_tidy<-as.data.table(x_tidy)
 data_step5<-x_tidy[,lapply(.SD, mean),by=.(activity, subject)]
 head(data_step5)
+
+write.table(data_step5, "data_clean_DT.txt", row.names = FALSE)
