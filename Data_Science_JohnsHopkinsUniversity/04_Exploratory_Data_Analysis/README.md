@@ -21,3 +21,10 @@ A data graphic should tell a completely story that is credible
 ## Principle 6: Content is king 
 Analytical presentations ultimatley stand or fall depending on the quality, relevance, and integrity of their content.
 
+Beatiful Evidence
+www.edwardtufte.com 
+
+# Exploratory Graphics
+
+Made qickly | A larger number are made
+Personal Understanding
